@@ -29,14 +29,12 @@ function kirill(){
 	return e;
 }
 function newprimer(){ 
-    n--;     
+    --n;     
     primer.innerHTML = kirill() + "<input type='number' id='suvk'>"; /*input*/
     document.getElementById("suvk").focus();
-    n--;
     document.getElementById('suvk').onchange=nextprimer;
 }
 function nextprimer(){
-    n--;
     var exam = primer.innerHTML;
     var inp = document.getElementById('suvk');
     exam = exam.substring(0, exam.indexOf("="));
