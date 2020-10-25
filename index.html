@@ -1,73 +1,29 @@
 <!doctype HTML>
 <html>
 <head>
-<title>smth</title>
 <link href="all.css" rel="stylesheet">
 <meta  charset ="utf-8">
+<script>
+    function setreg(){ 
+        name = document.getElementById('name').value;
+        surname = document.getElementById('surname').value;
+        grade = document.getElementById('grade').value;
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("surname", surname);
+        sessionStorage.setItem("grade", grade);
+        window.location.replace("game.html");
+    }
+</script>
 </head>
 <body>
 <header>
 <h1>Math game</h1>
 </header>
 <main>
-    <table border="0" align = "right"  width="50%" height="5">
-        <tr >
-        <th>Верных : </th>
-        <th id = "vernie">0</th>
-        <th>Неверных : </th>
-        <th id= "nevern">0</th>
-        <th>Вревени осталось : </th>
-        <th id= "tim">0</th>
-    </tr>
-    </table>
-    <div id="primer">pri</div>
-	<div id="histor"></div>
-    <script>
-        var tru=0;
-        var fal=0;
-        
-        var primer = document.getElementById('primer');
-        var histor = document.getElementById('histor');
-        function kirill(){
-           var e = Math.round(Math.random()*9) + "+" +  Math.round(Math.random()*9) + "="; /*iii*/
-           return e;
-        }
-        function newprimer(){
-        
-            primer.innerHTML = kirill() + "<input type='text' id='suvk'>"; /*input*/
-            document.getElementById("suvk").focus();
-            document.getElementById('suvk').onchange=nextprimer;
-          }
-        function nextprimer(){
-            var exam = primer.innerHTML
-            var inp = document.getElementById('suvk')
-            exam = exam.substring(0, exam.indexOf("="))
-            var result;
-            if( inp.value==eval(exam)){
-                result = ". Верно." ;
-                tru=tru+1
-            }
-            else{
-                result= ". Неверно, правильный ответ " + eval(exam);
-                fal=fal+1
-            }
-            histor.innerHTML = exam + " = " + inp.value + result + "\n" + histor.innerHTML;
-            newprimer();
-            document.getElementById("suvk").focus();
-            document.getElementById("vernie");
-            vernie.innerHTML = tru;
-            document.getElementById("nevern");
-            nevern.innerHTML = fal;
-            document.getElementById("tim");
-            nevern.innerHTML = fal;
-          }
-        
-        newprimer();
-        
-        </script>
+<p>Имя: <input type = "text" placeholder="Иван" id = "name" required></p>
+<p>Фамилия: <input type = "text" placeholder="Иванов" id = "surname" required></p>
+<p>Класс: <input type = "number" placeholder="1" id = "grade" required></p>
+<input type = "button" value = "Начать" onclick="setreg()">
 </main>
-<aside></aside>
-<footer>
-</footer>
 </body>
 </html>
