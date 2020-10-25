@@ -17,7 +17,11 @@ function kirill(){
             oper = '*';
             break;
     }
-	var e = Math.round(Math.random()*9) + ' ' + oper + ' ' +  Math.round(Math.random()*9) + " ="; /*iii*/
+    if(sessionStorage.getItem("grade") >= 4){
+        var e = Math.round(Math.random()*100) + ' ' + oper + ' ' +  Math.round(Math.random()*100) + " ="; /*iii*/
+    } else{
+        var e = Math.round(Math.random()*9) + ' ' + oper + ' ' +  Math.round(Math.random()*9) + " =";
+    }
 	return e;
 }
 function newprimer(){      
