@@ -1,23 +1,23 @@
+let timerShow = getElementById("tim");
+
 var timeMinut = 1200;
 
-var time;
-var seconds
-time = setInterval(function () {
-	seconds = timeMinut%60 // Получаем секунды
-	//minutes = timeMinut/60%60 // Получаем минуты
+tim = setInterval(function () {
+	var seconds = timeMinut%60 // Получаем секунды
+	var minutes = timeMinut/60%60 // Получаем минуты
     
 	// Условие если время закончилось то...
 	if (timeMinut <= 0) {
 		// Таймер удаляется
-		clearInterval(timer);
+		clearInterval(tim);
 		// Выводит сообщение что время закончилось
 		alert("Время закончилось");
 	}
 	else { // Иначе
 		// Создаём строку с выводом времени
-		time = $`{Math.trunc(minuts)}:${seconds}`;
+		let timSTR = `${Math.trunc(minuts)}:${seconds}`;
 		// Выводим строку в блок для показа таймера
+		timerShow.innerHTML = timSTR;
 	}
 	--timeMinut; // Уменьшаем таймер
-}, 1)
-setInterval(function(){document.getElementById("tim");tim.innerHTML = seconds;}, 1);
+}, 1000)
