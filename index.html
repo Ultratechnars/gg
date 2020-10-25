@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
 <head>
-<title>smth</title>
+<title>Math game</title>
 <link href="allindex.css" rel="stylesheet">
 <meta  charset ="utf-8">
 <script>
@@ -9,9 +9,11 @@
         name = document.getElementById('name').value;
         surname = document.getElementById('surname').value;
         grade = document.getElementById('grade').value;
+        quest = document.getElementById('quest').value;
         sessionStorage.setItem("name", name);
         sessionStorage.setItem("surname", surname);
         sessionStorage.setItem("grade", grade);
+        sessionStorage.setItem("quest", quest);
         window.location.replace("game.html");
     }
 </script>
@@ -19,7 +21,6 @@
 <body>
 <header>
 <h1>Устный счёт для школьников</h1>
-<h2>и не только...</h2>
 </header>
 <main>
 <script>document.getElementById('name').focus();</script>
@@ -27,8 +28,11 @@
 <li><input type = "text" placeholder="Имя" id = "name" required></li>
 <li><input type = "text" placeholder="Фамилия" id = "surname" required></li>
 <li><input type = "number" placeholder="Класс" id = "grade" required></li>
+<li><input type = "number" placeholder="Кол-во вопросов" id="quest" required></li>
 <li><input type = "button" value = "Начать" onclick="setreg()"></li>
 </ul>
 </main>
+<aside>
+</aside>
 </body>
 </html>
