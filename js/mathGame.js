@@ -51,11 +51,7 @@ function nextprimer(){
     }
     histor.innerHTML = exam + " = " + inp.value + result + "\n" + histor.innerHTML;
     if(n > 0){
-<<<<<<< Updated upstream
-    newprimer();
-=======
         newprimer();
->>>>>>> Stashed changes
     }
     else{
         sessionStorage.setItem("corr", tru);
