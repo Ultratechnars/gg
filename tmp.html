@@ -5,7 +5,13 @@
 <meta  charset ="utf-8">
 <script>
     function setreg(){ 
-        
+        name = document.getElementById('name').value;
+        surname = document.getElementById('surname').value;
+        grade = document.getElementById('grade').value;
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("surname", surname);
+        sessionStorage.setItem("grade", grade);
+        window.location.replace("index.html");
     }
 </script>
 </head>
@@ -14,12 +20,10 @@
 <h1>Math game</h1>
 </header>
 <main>
-<form method="POST">
-<p>Имя: <input type = "text" placeholder="Иван" name = "name" required></p>
-<p>Фамилия: <input type = "text" placeholder="Иванов" name = "surname" required></p>
-<p>Класс: <input type = "number" placeholder="1" name = "grade" required></p>
-<input type = "submit" value = "Зарегистрироваться">
-</form>
+<p>Имя: <input type = "text" placeholder="Иван" id = "name" required></p>
+<p>Фамилия: <input type = "text" placeholder="Иванов" id = "surname" required></p>
+<p>Класс: <input type = "number" placeholder="1" id = "grade" required></p>
+<input type = "button" value = "Зарегистрироваться" onclick="setreg()">
 </main>
 </body>
 </html>
