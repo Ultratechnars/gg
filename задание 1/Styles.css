@@ -1,0 +1,17 @@
+body
+{
+	background: #FFFF66
+}
+h1{
+    color: #f00;
+    font-family: 'Comic Sans MS'
+}
+h2{color: #000066
+}
+p,li{font-family: 'Segoe UT';
+     font-size:  14pt;
+}
+div{
+    white-space: pre;
+}
+
