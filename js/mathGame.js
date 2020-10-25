@@ -18,7 +18,11 @@ function kirill(){
             break;
     }
     if(sessionStorage.getItem("grade") >= 4){
-        var e = Math.round(Math.random()*100) + ' ' + oper + ' ' +  Math.round(Math.random()*100) + " ="; /*iii*/
+        if(oper === '*'){
+            var e = Math.round(Math.random()*100) + ' ' + oper + ' ' +  Math.round(Math.random()*10) + " ="; /*iii*/
+        }else{
+            var e = Math.round(Math.random()*100) + ' ' + oper + ' ' +  Math.round(Math.random()*100) + " =";
+        }
     } else{
         var e = Math.round(Math.random()*9) + ' ' + oper + ' ' +  Math.round(Math.random()*9) + " =";
     }
