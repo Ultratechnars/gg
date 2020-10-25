@@ -1,20 +1,24 @@
 <!doctype HTML>
 <html>
 <head>
-<tittle>smth</tittle>
 <link href="all.css" rel="stylesheet">
 <meta  charset ="utf-8">
+<script>
+    function setreg(){ 
+        
+    }
+</script>
 </head>
 <body>
 <header>
 <h1>Math game</h1>
 </header>
 <main>
-<form name = "reg" method="POST" action="">
-<p>Имя: <input type = "text" placeholder="Иван" id = "name" form="reg" required></p>
-<p>Фамилия: <input type = "text" placeholder="Иванов" id = "surname" form="reg" required></p>
-<p>Класс: <input type = "number" placeholder="1" id = "grade" form="reg" required></p>
-<input type = "submit" value = "Зарегистрироваться" form = "reg">
+<form method="POST">
+<p>Имя: <input type = "text" placeholder="Иван" name = "name" required></p>
+<p>Фамилия: <input type = "text" placeholder="Иванов" name = "surname" required></p>
+<p>Класс: <input type = "number" placeholder="1" name = "grade" required></p>
+<input type = "submit" value = "Зарегистрироваться">
 </form>
 </main>
 </body>
