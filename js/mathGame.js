@@ -1,8 +1,6 @@
 var tru=0;
 var fal=0;
 
-var timeMinut = 2940;
-
 var primer = document.getElementById('primer');
 var histor = document.getElementById('histor');
 function kirill(){
