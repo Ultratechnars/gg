@@ -12,11 +12,8 @@
     }   
     function setmark(){ 
         var res = sessionStorage.getItem("corr");
-        alert(res);
         var inc = sessionStorage.getItem("incorr");
-        alert(inc);
         var perc = Math.round((res / (res + inc))) * 100;
-        alert(perc);
         var mark = 0;
         if(perc >= 85){ 
             mark = 5;
@@ -27,7 +24,6 @@
         } else{ 
             mark = 2;
         }
-        alert(mark);
         document.getElementById('mark').innerHTML = "Ваша оценка:  " + mark;
         return;
     }   
