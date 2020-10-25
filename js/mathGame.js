@@ -4,7 +4,20 @@ var fal=0;
 var primer = document.getElementById('primer');
 var histor = document.getElementById('histor');
 function kirill(){
-	var e = Math.round(Math.random()*9) + "+" +  Math.round(Math.random()*9) + "="; /*iii*/
+    var op = Math.round(Math.random() * 1000);
+    var oper;
+    switch(op % 3){ 
+        case 0:
+            oper = '+';
+            break;
+        case 1:
+            oper = '-';
+            break;
+        case 2:
+            oper = '*';
+            break;
+    }
+	var e = Math.round(Math.random()*9) + ' ' + oper + ' ' +  Math.round(Math.random()*9) + " ="; /*iii*/
 	return e;
 }
 function newprimer(){      
@@ -13,9 +26,9 @@ function newprimer(){
     document.getElementById('suvk').onchange=nextprimer;
 }
 function nextprimer(){
-    var exam = primer.innerHTML
-    var inp = document.getElementById('suvk')
-    exam = exam.substring(0, exam.indexOf("="))
+    var exam = primer.innerHTML;
+    var inp = document.getElementById('suvk');
+    exam = exam.substring(0, exam.indexOf("="));
     var result;
     if( inp.value==eval(exam)){
         result = ". Верно." ;
