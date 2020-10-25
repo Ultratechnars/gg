@@ -1,4 +1,11 @@
-
+input{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px 5px 5px 5px;
+    border: solid 3px black;
+	margin-bottom: 10px;
+    outline:none;
+}
 header{
     height: 100px;
     background-color: rgb(186, 236, 240);
