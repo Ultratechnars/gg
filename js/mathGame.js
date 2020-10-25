@@ -67,9 +67,5 @@ function nextprimer(){
     nevern.innerHTML = n; 
 }
   
-<<<<<<< Updated upstream
     newprimer();
 
-=======
-    newprimer();
->>>>>>> Stashed changes
