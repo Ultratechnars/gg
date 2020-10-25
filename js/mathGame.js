@@ -62,7 +62,7 @@ function nextprimer(){
     document.getElementById("nevern");
     nevern.innerHTML = fal; 
     document.getElementById("left");
-    nevern.innerHTML = n; 
+    left.innerHTML = n; 
 }
   
     newprimer();
