@@ -8,7 +8,7 @@ function kirill(){
 	return e;
 }
 function newprimer(){      
-    primer.innerHTML = kirill() + "<input type='text' id='suvk'>"; /*input*/
+    primer.innerHTML = kirill() + "<input type='number' id='suvk'>"; /*input*/
     document.getElementById("suvk").focus();
     document.getElementById('suvk').onchange=nextprimer;
 }
