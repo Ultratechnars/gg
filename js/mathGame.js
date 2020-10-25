@@ -58,4 +58,9 @@ function nextprimer(){
 }
   
     newprimer();
-        
+/*
+sessionStorage.setItem("corr", tru);
+sessionStorage.setItem("incorr", fal);
+window.location.replace("results.html");
+
+*/

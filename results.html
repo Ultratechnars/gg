@@ -1,0 +1,50 @@
+<!doctype HTML>
+<html>
+<head>
+<link href="styles/all.css" rel="stylesheet">
+<title>Math Game | Results</title>
+<meta  charset ="utf-8">
+<script>
+    function setresult(){
+        var res = sessionStorage.getItem("corr");
+        document.getElementById('res').innerHTML = "ПОЗДРАВЛЯЕМ!!! Вы набрали " + res + " баллов!";
+        return;
+    }   
+    function setmark(){ 
+        var res = sessionStorage.getItem("corr");
+        alert(res);
+        var inc = sessionStorage.getItem("incorr");
+        alert(inc);
+        var perc = Math.round((res / (res + inc))) * 100;
+        alert(perc);
+        var mark = 0;
+        if(perc >= 85){ 
+            mark = 5;
+        } else if (perc >= 70){
+            mark = 4;
+        } else if (perc >= 55){ 
+            mark = 3;
+        } else{ 
+            mark = 2;
+        }
+        alert(mark);
+        document.getElementById('mark').innerHTML = "Ваша оценка:  " + mark;
+        return;
+    }   
+</script>
+</head>
+<body>
+<header>
+<h1>Math game</h1>
+</header>
+<main>
+    <div id = "res"></div>
+    <div id = "mark">fff</div>
+<script>
+    setresult();
+    alert("d");
+    setmark();
+</script>
+</main>
+</body>
+</html>

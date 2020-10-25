@@ -6,9 +6,9 @@
 <meta  charset ="utf-8">
 <script>
     function setreg(){ 
-        name = document.getElementById('name').value;
-        surname = document.getElementById('surname').value;
-        grade = document.getElementById('grade').value;
+        var name = document.getElementById('name').value;
+        var surname = document.getElementById('surname').value;
+        var grade = document.getElementById('grade').value;
         sessionStorage.setItem("name", name);
         sessionStorage.setItem("surname", surname);
         sessionStorage.setItem("grade", grade);
