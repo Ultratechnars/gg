@@ -1,6 +1,6 @@
 var tru=0;
 var fal=0;
-      
+
 var primer = document.getElementById('primer');
 var histor = document.getElementById('histor');
 function kirill(){
@@ -52,9 +52,7 @@ function nextprimer(){
     document.getElementById("vernie");
     vernie.innerHTML = tru;
     document.getElementById("nevern");
-    nevern.innerHTML = fal;
-    document.getElementById("tim");
-    nevern.innerHTML = fal;
+    nevern.innerHTML = fal;  
 }
   
     newprimer();
