@@ -1,6 +1,6 @@
 var tru=0;
 var fal=0;
-
+var n = sessionStorage.getItem("quest");
 var primer = document.getElementById('primer');
 var histor = document.getElementById('histor');
 function kirill(){
@@ -28,12 +28,15 @@ function kirill(){
     }
 	return e;
 }
-function newprimer(){      
+function newprimer(){ 
+    n--;     
     primer.innerHTML = kirill() + "<input type='number' id='suvk'>"; /*input*/
     document.getElementById("suvk").focus();
+    n--;
     document.getElementById('suvk').onchange=nextprimer;
 }
 function nextprimer(){
+    n--;
     var exam = primer.innerHTML;
     var inp = document.getElementById('suvk');
     exam = exam.substring(0, exam.indexOf("="));
@@ -47,18 +50,30 @@ function nextprimer(){
         fal=fal+1
     }
     histor.innerHTML = exam + " = " + inp.value + result + "\n" + histor.innerHTML;
+    if(n > 0){
+<<<<<<< Updated upstream
     newprimer();
+=======
+        newprimer();
+>>>>>>> Stashed changes
+    }
+    else{
+        sessionStorage.setItem("corr", tru);
+        sessionStorage.setItem("incorr", fal);
+        window.location.replace("results.html");
+    }
     document.getElementById("suvk").focus();
     document.getElementById("vernie");
     vernie.innerHTML = tru;
     document.getElementById("nevern");
-    nevern.innerHTML = fal;  
+    nevern.innerHTML = fal; 
+    document.getElementById("left");
+    nevern.innerHTML = n; 
 }
   
+<<<<<<< Updated upstream
     newprimer();
-/*
-sessionStorage.setItem("corr", tru);
-sessionStorage.setItem("incorr", fal);
-window.location.replace("results.html");
 
-*/
+=======
+    newprimer();
+>>>>>>> Stashed changes

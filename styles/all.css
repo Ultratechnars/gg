@@ -56,6 +56,19 @@ input[type="text"] {
     border: solid 3px rgb(112, 12, 37);
     font-size: 30px;
  }
+ input[type="number"] {
+    outline: none;
+    border-radius: 10px; 
+    height: 45px;
+    width: 50px; 
+    color: #000000; 
+    font-size: 11px; 
+    font-family: Tahoma; 
+    margin-top: -20px;
+    margin-bottom: 2px;
+    border: solid 3px rgb(112, 12, 37);
+    font-size: 30px;
+ }
  aside{
      margin-left: 80%;
      overflow: hidden;
